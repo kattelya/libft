@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/01 14:42:15 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/01 15:20:32 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:34:41 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	while (n--)
 	{
 		if (!(*s1++ = *s2++))
-			return(dst);
+			return (dst);
 	}
 	*s1 = '\0';
 	return (dst);

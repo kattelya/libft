@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/13 10:17:57 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 10:49:35 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:33:15 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n / 10, fd);
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
-	else 
+	else
 		ft_putchar_fd(n + '0', fd);
 }

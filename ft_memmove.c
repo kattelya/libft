@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 00:57:34 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/09/28 23:54:35 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:29:29 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ If the source and destination addresses do not overlap then copy from the beginn
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	const char *source;
-	char *dest;
+	const char	*source;
+	char		*dest;
 
 	source = (const char*)src;
 	dest = (char*)dst;
@@ -36,7 +36,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	else
 	{
 		while (len--)
-		*dest++ = *source++;
+			*dest++ = *source++;
 	}
-	return (dst);	
+	return (dst);
 }

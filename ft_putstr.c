@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 22:08:55 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 09:53:03 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:19:56 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putstr(char const *s)
 {
 	while (*s != '\0')
-		ft_putchar(*s++);;
+		ft_putchar(*s++);
 }

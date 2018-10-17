@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/13 11:09:18 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 11:10:11 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:39:56 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *) ft_memalloc(size + 1));
+	return ((char *)ft_memalloc(size + 1));
 }

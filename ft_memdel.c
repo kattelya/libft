@@ -6,16 +6,16 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/13 09:17:41 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 09:27:58 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:37:20 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_memdel(void **ap)
-{	
+{
 	if (!ap || !*ap)
 		return ;
-	free (*ap);
+	free(*ap);
 	*ap = 0;
 }

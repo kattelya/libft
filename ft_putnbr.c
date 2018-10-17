@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 22:41:45 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 09:43:56 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:31:09 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr(int n)
 			ft_putnbr(n / 10);
 			ft_putchar((n % 10) + '0');
 		}
-		else 
+		else
 			ft_putchar(n + '0');
 	}
 }

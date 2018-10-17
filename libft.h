@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 03:15:33 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/13 11:20:43 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/16 23:41:03 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,4 @@ void		*ft_memalloc(size_t size);
 void		ft_memdel(void **ap);
 char		*ft_strnew(size_t size);
 
-#endif // LIBFT_H
+#endif 
