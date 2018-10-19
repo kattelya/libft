@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 09:37:07 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/18 21:12:37 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/19 14:10:01 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int		ft_atoi(const char *str)
 		str++;
 	while (ft_isdigit(*str)) /* *str >= '0' && *str <= '9' */
 	{
-		result *=  10; /* result * 10 */
-		result += (*str - '0'); /* *str = '0' */
+		result *=  10; /* result * 10 + (*str - '0') */
+		result += (*str - '0');
 		str++;
 	}
-	if (*str > 19 || result == 922372036854775808ULL)
-		return (sign == 1 ? -1 : 0);
+	/*if (*str > 19 || result == 922372036854775808ULL)
+		return (sign == 1 ? -1 : 0); */
 	return ((int)(result * sign));
 }

@@ -6,7 +6,7 @@
 #    By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/12 02:34:16 by kaanggas          #+#    #+#              #
-#    Updated: 2018/10/18 16:38:01 by kaanggas         ###   ########.fr        #
+#    Updated: 2018/10/19 15:24:44 by kaanggas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ $(NAME): ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o ft_strcpy
 	ft_putendl_fd.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o \
 	ft_isalpha.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
 	ft_strncat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o ft_strequ.o \
-	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o
+	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o 
 		ar rc $(NAME) *.o 
 		ranlib $(NAME)
 
@@ -116,7 +116,7 @@ clean:
 			ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
 			ft_memalloc.o ft_strncat.o ft_memdel.o ft_strlcat.o ft_strnew.o \
 			ft_putnbr_fd.o ft_strequ.o ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o \
-			ft_striteri.o
+			ft_striteri.o	
 
 fclean: clean
 		/bin/rm -f $(NAME)
