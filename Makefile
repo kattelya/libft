@@ -6,7 +6,7 @@
 #    By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/12 02:34:16 by kaanggas          #+#    #+#              #
-#    Updated: 2018/10/14 21:48:40 by kaanggas         ###   ########.fr        #
+#    Updated: 2018/10/18 16:38:01 by kaanggas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ $(NAME): ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o ft_strcpy
 	ft_putchar.o ft_putendl.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
 	ft_putendl_fd.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o \
 	ft_isalpha.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
-	ft_strncat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o 
-		
+	ft_strncat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o ft_strequ.o \
+	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o
 		ar rc $(NAME) *.o 
 		ranlib $(NAME)
 
@@ -94,6 +94,18 @@ ft_memdel.o: ft_memdel.c
 	gcc -Wall -Wextra -Werror -c -o ft_memdel.o ft_memdel.c
 ft_strnew.o: ft_strnew.c
 	gcc -Wall -Wextra -Werror -c -o ft_strnew.o ft_strnew.c
+ft_strdel.o: ft_strdel.c
+	gcc -Wall -Wextra -Werror -c -o ft_strdel.o ft_strdel.c
+ft_strclr.o: ft_strclr.c
+	gcc -Wall -Wextra -Werror -c -o ft_strclr.o ft_strclr.c
+ft_striter.o: ft_striter.c
+	gcc -Wall -Wextra -Werror -c -o ft_striter.o ft_striter.c
+ft_striteri.o: ft_striteri.c
+	gcc -Wall -Wextra -Werror -c -o ft_striteri.o ft_striteri.c
+ft_strequ.o: ft_strequ.c
+	gcc -Wall -Wextra -Werror -c -o ft_strequ.o ft_strequ.c
+ft_strnequ.o: ft_strnequ.c
+	gcc -Wall -Wextra -Werror -c -o ft_strnequ.o ft_strnequ.c
 
 clean:
 	/bin/rm -f ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o \
@@ -103,7 +115,8 @@ clean:
 			ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_isalpha.o \
 			ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
 			ft_memalloc.o ft_strncat.o ft_memdel.o ft_strlcat.o ft_strnew.o \
-			ft_putnbr_fd.o
+			ft_putnbr_fd.o ft_strequ.o ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o \
+			ft_striteri.o
 
 fclean: clean
 		/bin/rm -f $(NAME)

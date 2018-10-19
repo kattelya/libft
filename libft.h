@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 03:15:33 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/16 23:41:03 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/10/18 16:37:04 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,11 @@ int			ft_tolower(int c);
 void		*ft_memalloc(size_t size);
 void		ft_memdel(void **ap);
 char		*ft_strnew(size_t size);
+void		ft_strdel(char **as);
+void		ft_strclr(char *s);
+void		ft_striter(char *s, void (*f)(char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+int			ft_strequ(char const *s1, char const *s2);
+int			ft_strnequ(char const *s1, char const *s2, size_t n);
 
 #endif 
