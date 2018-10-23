@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/10 01:56:15 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/22 21:24:12 by kaanggas         ###   ########.fr       */
+/*   Created: 2018/10/21 15:00:23 by kaanggas          #+#    #+#             */
+/*   Updated: 2018/10/22 11:05:44 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*dst;	
-	unsigned int start;
+	char		*newstring;
+	unsigned int i;
 
-	start = 0;
-	while(ft_iswhitespace(*s))
-		s++;
-	if (!s)
-		return (ft_strnew(1));
-	dst = ft_strnew(strlen(s));
-	return (dst);
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	newstring = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!newstring)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+			newstring[i] = (*f)(i,s[i]);
+				i++;
+	}
+	newstring[i] = '\0';
+	return (newstring);
 }

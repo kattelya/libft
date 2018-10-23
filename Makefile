@@ -6,7 +6,7 @@
 #    By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/12 02:34:16 by kaanggas          #+#    #+#              #
-#    Updated: 2018/10/19 15:24:44 by kaanggas         ###   ########.fr        #
+#    Updated: 2018/10/22 21:19:15 by kaanggas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ $(NAME): ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o ft_strcpy
 	ft_putendl_fd.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o \
 	ft_isalpha.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
 	ft_strncat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o ft_strequ.o \
-	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o 
+	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o \
+	ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_itoa.o ft_iswhitespace.o
 		ar rc $(NAME) *.o 
 		ranlib $(NAME)
 
@@ -102,10 +103,24 @@ ft_striter.o: ft_striter.c
 	gcc -Wall -Wextra -Werror -c -o ft_striter.o ft_striter.c
 ft_striteri.o: ft_striteri.c
 	gcc -Wall -Wextra -Werror -c -o ft_striteri.o ft_striteri.c
+ft_strmap.o: ft_strmap.c
+	gcc -Wall -Wextra -Werror -c -o ft_strmap.o ft_strmap.c
+ft_strmapi.o: ft_strmapi.c
+	gcc -Wall -Wextra -Werror -c -o ft_strmapi.o ft_strmapi.c
 ft_strequ.o: ft_strequ.c
 	gcc -Wall -Wextra -Werror -c -o ft_strequ.o ft_strequ.c
 ft_strnequ.o: ft_strnequ.c
 	gcc -Wall -Wextra -Werror -c -o ft_strnequ.o ft_strnequ.c
+ft_strsub.o: ft_strsub.c
+	gcc -Wall -Wextra -Werror -c -o ft_strsub.o ft_strsub.c
+ft_strjoin.o: ft_strsub.c
+	gcc -Wall -Wextra -Werror -c -o ft_strjoin.o ft_strjoin.c
+ft_strtrim.o: ft_strtrim.c
+	gcc -Wall -Wextra -Werror -c -o ft_strtrim.o ft_strtrim.c
+ft_itoa.o: ft_itoa.c
+	gcc -Wall -Wextra -Werror -c -o ft_itoa.o ft_itoa.c
+ft_iswhitespace.o: ft_iswhitespace.c
+	gcc -Wall -Wextra -Werror -c -o ft_iswhitespace.o ft_iswhitespace.c
 
 clean:
 	/bin/rm -f ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o \
@@ -116,7 +131,8 @@ clean:
 			ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
 			ft_memalloc.o ft_strncat.o ft_memdel.o ft_strlcat.o ft_strnew.o \
 			ft_putnbr_fd.o ft_strequ.o ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o \
-			ft_striteri.o	
+			ft_striteri.o ft_strmap.o ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o \
+		   	ft_itoa.o ft_iswhitespace.o
 
 fclean: clean
 		/bin/rm -f $(NAME)

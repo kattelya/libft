@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/10 01:56:15 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/22 21:24:12 by kaanggas         ###   ########.fr       */
+/*   Created: 2018/10/21 16:23:05 by kaanggas          #+#    #+#             */
+/*   Updated: 2018/10/22 15:38:50 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strtrim(char const *s)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char		*dst;	
-	unsigned int start;
+	char	*fresh;
+	size_t	i;
 
-	start = 0;
-	while(ft_iswhitespace(*s))
-		s++;
-	if (!s)
-		return (ft_strnew(1));
-	dst = ft_strnew(strlen(s));
-	return (dst);
+	i = 0;
+	fresh = ft_strnew(len);
+	if (!s || !fresh)
+		return (NULL);
+	while(i < len)
+	{
+		fresh[i] = s[i + start];
+		i++;
+	}
+	fresh[i] = '\0';
+	return (fresh);
 }
+
+/*int		main()
+{
+	char test [20] = "Hello world";
+	printf("print the first 4 letters %s\n", ft_strsub(test, 0, 4));
+	return (0);
+} */

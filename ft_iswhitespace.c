@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/10 01:56:15 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/22 21:24:12 by kaanggas         ###   ########.fr       */
+/*   Created: 2018/10/22 15:54:42 by kaanggas          #+#    #+#             */
+/*   Updated: 2018/10/22 21:22:54 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+int		ft_iswhitespace(char c)
 {
-	char		*dst;	
-	unsigned int start;
-
-	start = 0;
-	while(ft_iswhitespace(*s))
-		s++;
-	if (!s)
-		return (ft_strnew(1));
-	dst = ft_strnew(strlen(s));
-	return (dst);
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	return (0);
 }
