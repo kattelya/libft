@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 23:30:37 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/11/05 04:18:05 by kaanggas         ###   ########.fr       */
+/*   Created: 2018/11/05 02:20:27 by kaanggas          #+#    #+#             */
+/*   Updated: 2018/11/05 03:00:08 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	char *str;
+	int	locatelast;
 
-	str = s;
-	while (n--)
-	{
-		*str++ = '\0';
-	}
+	locatelast = ft_strlen(s) + 1;
+	while (locatelast-- >= 0)
+		if (s[locatelast] == (char)c)
+			return ((char *)&(s[locatelast]));
+	return (0);
 }

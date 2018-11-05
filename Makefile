@@ -6,7 +6,7 @@
 #    By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/12 02:34:16 by kaanggas          #+#    #+#              #
-#    Updated: 2018/10/22 21:19:15 by kaanggas         ###   ########.fr        #
+#    Updated: 2018/11/05 06:02:01 by kaanggas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,13 @@ all: $(NAME)
 $(NAME): ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o ft_strcpy.o \
 	ft_strncpy.o ft_strdup.o ft_strlen.o ft_tolower.o ft_toupper.o ft_putstr.o \
 	ft_putchar.o ft_putendl.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
-	ft_putendl_fd.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o \
+	ft_putendl_fd.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o\
 	ft_isalpha.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_atoi.o ft_strcat.o \
-	ft_strncat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o ft_strequ.o \
+	ft_strncat.o ft_strlcat.o ft_memalloc.o ft_memdel.o ft_putnbr_fd.o ft_strnew.o ft_strequ.o \
 	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o \
-	ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_itoa.o ft_iswhitespace.o
+	ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o \
+   	ft_iswhitespace.o ft_strrchr.o ft_strstr.o ft_strnstr.o ft_islower.o ft_isupper.o \
+	ft_strndup.o ft_strnlen.o
 		ar rc $(NAME) *.o 
 		ranlib $(NAME)
 
@@ -87,6 +89,8 @@ ft_strcat.o: ft_strcat.c
 	gcc -Wall -Wextra -Werror -c -o ft_strcat.o ft_strcat.c
 ft_strncat.o: ft_strncat.c
 	gcc -Wall -Wextra -Werror -c -o ft_strncat.o ft_strncat.c
+ft_strlat.o: ft_strlcat.c
+	gcc -Wall -Wextra -Werror -c -o ft_strlcat.o ft_strlcat.c
 ft_atoi.o: ft_atoi.c
 	gcc -Wall -Wextra -Werror -c -o ft_atoi.o ft_atoi.c
 ft_memalloc.o: ft_memalloc.c
@@ -117,10 +121,26 @@ ft_strjoin.o: ft_strsub.c
 	gcc -Wall -Wextra -Werror -c -o ft_strjoin.o ft_strjoin.c
 ft_strtrim.o: ft_strtrim.c
 	gcc -Wall -Wextra -Werror -c -o ft_strtrim.o ft_strtrim.c
+ft_strsplit.o: ft_strsplit.c
+	gcc -Wall -Wextra -Werror -c -o ft_strsplit.o ft_strsplit.c 
 ft_itoa.o: ft_itoa.c
 	gcc -Wall -Wextra -Werror -c -o ft_itoa.o ft_itoa.c
 ft_iswhitespace.o: ft_iswhitespace.c
 	gcc -Wall -Wextra -Werror -c -o ft_iswhitespace.o ft_iswhitespace.c
+ft_strrchr.o: ft_strrchr.c
+	gcc -Wall -Wextra -Werror -c -o ft_strrchr.o ft_strrchr.c
+ft_strstr.o: ft_strstr.c
+	gcc -Wall -Wextra -Werror -c -o ft_strstr.o ft_strstr.c
+ft_strnstr.o: ft_strnstr.c
+	gcc -Wall -Wextra -Werror -c -o ft_strnstr.o ft_strnstr.c
+ft_islower.o: ft_islower.c
+	gcc -Wall -Wextra -Werror -c -o ft_islower.o ft_islower.c
+ft_isupper.o: ft_isupper.c
+	gcc -Wall -Wextra -Werror -c -o ft_isupper.o ft_isupper.c
+ft_strndup.o: ft_strndup.c
+	gcc -Wall -Wextra -Werror -c -o ft_strndup.o ft_strndup.c
+ft_strnlen.o: ft_strnlen.c
+	gcc -Wall -Wextra -Werror -c -o ft_strnlen.o ft_strnlen.c
 
 clean:
 	/bin/rm -f ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o \
@@ -132,7 +152,8 @@ clean:
 			ft_memalloc.o ft_strncat.o ft_memdel.o ft_strlcat.o ft_strnew.o \
 			ft_putnbr_fd.o ft_strequ.o ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o \
 			ft_striteri.o ft_strmap.o ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o \
-		   	ft_itoa.o ft_iswhitespace.o
+		   	ft_strsplit.o ft_itoa.o ft_iswhitespace.o ft_strrchr.o ft_strstr.o ft_strnstr.o \
+			ft_islower.o ft_isupper.o ft_strndup.o ft_strnlen.o
 
 fclean: clean
 		/bin/rm -f $(NAME)

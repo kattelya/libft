@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/12 04:09:50 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/16 23:39:19 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 04:51:33 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,3 @@ char	*ft_strdup(const char *s1)
 	ft_strcpy(dup, s1);
 	return (dup);
 }
-
-/* on the ofchance if not allocates enough memory for a copy to happen then return 
- * NULL)
- * dup = allocates enough memory for a s1 to copy itself and return a pointer to it */
-

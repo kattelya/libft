@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/18 16:29:08 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/21 15:49:54 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 04:49:29 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	if (!s || !f)
 		return ;
 	while (*s != '\0')
-		f(i++,s++);
+		f(i++, s++);
 }

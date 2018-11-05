@@ -6,16 +6,11 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 00:57:34 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/16 23:29:29 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 04:20:23 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* copies the data first to an intermediate buffer, then from buffer to dst*/
-/* If the source and destination addresses are same then left as it is.
-If the source and destination addresses overlap then copy from the end (backward copy).
-If the source and destination addresses do not overlap then copy from the beginning (forward a copy).*/
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -24,8 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	source = (const char*)src;
 	dest = (char*)dst;
-	if (source < dest) /* check if this overlap */
-	{ /*if overlap then copy from end */
+	if (source < dest)
+	{
 		source = source + len - 1;
 		dest = dest + len - 1;
 		while (len--)

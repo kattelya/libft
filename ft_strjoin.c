@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/21 22:05:26 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/22 11:18:06 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 04:30:22 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*fresh;
-	int 			len1;
-	int 			len2;
+	char	*fresh;
+	int		len1;
+	int		len2;
 
 	if (!s1 || !s2)
 		return (NULL);
