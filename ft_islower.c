@@ -6,13 +6,13 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 05:15:01 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/11/05 06:10:57 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 06:50:57 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_islower(char c)
+int		ft_islower(int c)
 {
 	return (c >= 97 && c <= 122);
 }

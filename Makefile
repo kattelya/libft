@@ -6,7 +6,7 @@
 #    By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/12 02:34:16 by kaanggas          #+#    #+#              #
-#    Updated: 2018/11/05 06:02:01 by kaanggas         ###   ########.fr        #
+#    Updated: 2018/11/11 00:35:22 by kaanggas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ $(NAME): ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o ft_strcpy
 	ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o \
 	ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o \
    	ft_iswhitespace.o ft_strrchr.o ft_strstr.o ft_strnstr.o ft_islower.o ft_isupper.o \
-	ft_strndup.o ft_strnlen.o
+	ft_strndup.o ft_strnlen.o ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 		ar rc $(NAME) *.o 
 		ranlib $(NAME)
 
@@ -75,7 +75,7 @@ ft_putstr_fd.o: ft_putstr_fd.c
 	gcc -Wall -Wextra -Werror -c -o ft_putstr_fd.o ft_putstr_fd.c
 ft_putendl_fd.o: ft_putendl_fd.c
 	gcc -Wall -Wextra -Werror -c -o ft_putendl_fd.o ft_putendl_fd.c
-ft_putnbr_fd.o: ft_putnbr.c
+ft_putnbr_fd.o: ft_putnbr_fd.c
 	gcc -Wall -Wextra -Werror -c -o ft_putnbr_fd.o ft_putnbr_fd.c
 ft_isalpha.o: ft_isalpha.c
 	gcc -Wall -Wextra -Werror -c -o ft_isalpha.o ft_isalpha.c
@@ -89,7 +89,7 @@ ft_strcat.o: ft_strcat.c
 	gcc -Wall -Wextra -Werror -c -o ft_strcat.o ft_strcat.c
 ft_strncat.o: ft_strncat.c
 	gcc -Wall -Wextra -Werror -c -o ft_strncat.o ft_strncat.c
-ft_strlat.o: ft_strlcat.c
+ft_strlcat.o: ft_strlcat.c
 	gcc -Wall -Wextra -Werror -c -o ft_strlcat.o ft_strlcat.c
 ft_atoi.o: ft_atoi.c
 	gcc -Wall -Wextra -Werror -c -o ft_atoi.o ft_atoi.c
@@ -141,6 +141,18 @@ ft_strndup.o: ft_strndup.c
 	gcc -Wall -Wextra -Werror -c -o ft_strndup.o ft_strndup.c
 ft_strnlen.o: ft_strnlen.c
 	gcc -Wall -Wextra -Werror -c -o ft_strnlen.o ft_strnlen.c
+ft_lstnew.o: ft_lstnew.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstnew.o ft_lstnew.c
+ft_lstdelone.o: ft_lstdelone.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstdelone.o ft_lstdelone.c
+ft_lstdel.o: ft_lstdel.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstdel.o ft_lstdel.c
+ft_lstadd.o: ft_lstadd.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstadd.o ft_lstadd.c
+ft_lstiter.o: ft_lstiter.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstiter.o ft_lstiter.c
+ft_lstmap.o: ft_lstmap.c
+	gcc -Wall -Wextra -Werror -c -o ft_lstmap.o ft_lstmap.c
 
 clean:
 	/bin/rm -f ft_isdigit.o ft_memset.o ft_strchr.o ft_strcmp.o ft_strncmp.o \
@@ -153,7 +165,8 @@ clean:
 			ft_putnbr_fd.o ft_strequ.o ft_strnequ.o ft_strdel.o ft_strclr.o ft_striter.o \
 			ft_striteri.o ft_strmap.o ft_strmapi.o ft_strsub.o ft_strjoin.o ft_strtrim.o \
 		   	ft_strsplit.o ft_itoa.o ft_iswhitespace.o ft_strrchr.o ft_strstr.o ft_strnstr.o \
-			ft_islower.o ft_isupper.o ft_strndup.o ft_strnlen.o
+			ft_islower.o ft_isupper.o ft_strndup.o ft_strnlen.o ft_lstnew.o ft_lstdelone.o \
+		   	ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
 fclean: clean
 		/bin/rm -f $(NAME)

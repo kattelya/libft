@@ -6,7 +6,7 @@
 /*   By: kaanggas <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 00:44:17 by kaanggas          #+#    #+#             */
-/*   Updated: 2018/10/16 23:21:18 by kaanggas         ###   ########.fr       */
+/*   Updated: 2018/11/05 15:56:28 by kaanggas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,10 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char *tmp;
+	char	*tmp;
 
 	tmp = dst;
 	while (n--)
-	{
-		*(char*)dst++ = *(const char*)src;
-		if (*(const char*)src)
-			src++;
-	}
+		*(char*)dst++ = *(const char*)src++;
 	return (tmp);
 }
